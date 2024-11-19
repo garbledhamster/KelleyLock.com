@@ -117,58 +117,46 @@ header nav ul.nav-links li a:hover {
 .hero {
   position: relative;
   height: 100vh; /* Full viewport height */
-  overflow: hidden;
-}
-
-.hero-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  /* Optional: Add a slight dark overlay for better text visibility */
-  filter: brightness(70%);
-  transition: transform 0.3s ease-in-out;
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-image: url('assets/images/banner.png');
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #ffffff;
-  text-align: center;
-  padding: 1.5rem;
+}
+
+.hero .hero-text {
   background: rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
   border-radius: 10px;
+  text-align: center;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.hero-text.dark-text {
+.hero .hero-text.dark-text {
   color: #ffffff;
   background: rgba(0, 0, 0, 0.4);
 }
 
-.hero-text.light-text {
+.hero .hero-text.light-text {
   color: #5d4037; /* Dark Brown */
   background: rgba(255, 248, 225, 0.8); /* Light Cream with opacity */
 }
 
-.hero-text h2 {
+.hero .hero-text h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #fff8e1; /* Light Cream */
 }
 
-.hero-text p {
+.hero .hero-text p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: #fff8e1; /* Light Cream */
 }
 
-.hero-text .button {
+.hero .hero-text .button {
   background-color: #d2691e; /* Chocolate */
   padding: 0.8rem 1.5rem;
   border: none;
@@ -179,7 +167,7 @@ header nav ul.nav-links li a:hover {
   transition: background 0.3s ease-in-out;
 }
 
-.hero-text .button:hover {
+.hero .hero-text .button:hover {
   background-color: #b35814; /* Darker Chocolate */
 }
 
@@ -393,8 +381,6 @@ footer p {
   position: fixed;
   bottom: 40px;
   right: 40px;
-  width: 50px;
-  height: 50px;
   background-color: #d2691e; /* Chocolate */
   color: #fff8e1; /* Light Cream */
   border: none;
@@ -466,30 +452,4 @@ section ul {
 
 section ul li {
   margin-bottom: 0.5rem;
-}
-
-/* Hero Image Hover Effect (Optional) */
-.hero-image:hover {
-  transform: scale(1.05);
-}
-
-/* Background Wrapper */
-.background-wrapper {
-  background-color: #f5f5dc; /* Soft Beige */
-  padding: 2rem 0;
-}
-
-.background-wrapper.light {
-  background-color: #fff8e1; /* Light Cream */
-}
-
-/* Text Color Transition */
-.hero-text.light-text h2,
-.hero-text.light-text p {
-  color: #5d4037; /* Dark Brown */
-}
-
-.hero-text.dark-text h2,
-.hero-text.dark-text p {
-  color: #ffffff; /* White */
 }
