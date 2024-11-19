@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelector(".nav-links");
   const backToTopBtn = document.getElementById("back-to-top");
   const contactForm = document.getElementById("contactForm");
+  const heroText = document.querySelector(".hero-text");
+  const heroSection = document.querySelector(".hero");
 
   // Toggle mobile menu
   hamburger.addEventListener("click", () => {
@@ -50,6 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
       backToTopBtn.classList.add("visible");
     } else {
       backToTopBtn.classList.remove("visible");
+    }
+
+    // Toggle hero text color based on scroll
+    if (window.pageYOffset > heroSection.offsetHeight - 100) {
+      heroText.classList.add("light-text");
+      heroText.classList.remove("dark-text");
+    } else {
+      heroText.classList.add("dark-text");
+      heroText.classList.remove("light-text");
     }
   });
 
