@@ -1,5 +1,3 @@
-// script.js
-
 // Initialize EmailJS with your user ID
 emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your actual EmailJS user ID
 
@@ -13,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("open");
     hamburger.classList.toggle("active");
+    document.body.classList.toggle("no-scroll");
   });
 
   // Smooth Scrolling
@@ -30,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (navLinks.classList.contains("open")) {
           navLinks.classList.remove("open");
           hamburger.classList.remove("active");
+          document.body.classList.remove("no-scroll");
         }
       }
     });
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Send the form using EmailJS
     emailjs.sendForm('YOUR_EMAILJS_SERVICE_ID', 'YOUR_EMAILJS_TEMPLATE_ID', contactForm)
       .then(() => {
-        alert("Thank you for your message! We will get back to you soon.");
+        alert("Thank you for your message! We'll get back to you soon.");
         contactForm.reset();
         grecaptcha.reset();
       }, (err) => {
