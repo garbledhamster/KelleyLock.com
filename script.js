@@ -1,18 +1,17 @@
-// Include EmailJS SDK
-// Add this in the JavaScript settings under "Add External Scripts/Pens":
-// https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js
+// script.js
 
-emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
+// Initialize EmailJS with your user ID
+emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your actual EmailJS user ID
 
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
   const backToTopBtn = document.getElementById("back-to-top");
-  const contactForm = document.getElementById("contact-form");
+  const contactForm = document.getElementById("contactForm");
 
   // Toggle mobile menu
   hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+    navLinks.classList.toggle("open");
     hamburger.classList.toggle("active");
   });
 
@@ -28,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
           behavior: "smooth"
         });
         // Close mobile menu after clicking
-        if (navLinks.classList.contains("active")) {
-          navLinks.classList.remove("active");
+        if (navLinks.classList.contains("open")) {
+          navLinks.classList.remove("open");
           hamburger.classList.remove("active");
         }
       }
