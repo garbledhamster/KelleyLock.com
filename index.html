@@ -5,8 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kelley Locksmithing & Handyman Services</title>
+
+  <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Google Fonts (Optional: For enhanced typography) -->
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- reCAPTCHA v2 -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -51,16 +64,18 @@
   </section>
 
   <section class="gallery">
-    <h2>Our Work &amp; Inspiration</h2>
-    <div class="image-grid">
-      <img src="https://images.pexels.com/photos/7641991/pexels-photo-7641991.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Key duplication" />
-      <img src="https://images.pexels.com/photos/11543858/pexels-photo-11543858.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Key close-up on table" />
-      <img src="https://images.pexels.com/photos/333837/pexels-photo-333837.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Keyhole close-up" />
-      <img src="https://images.pexels.com/photos/114741/pexels-photo-114741.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hand inserting key" />
-      <img src="https://images.pexels.com/photos/333838/pexels-photo-333838.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Locksmith tools" />
-      <img src="https://images.pexels.com/photos/29372725/pexels-photo-29372725/free-photo-of-woman-locking-wooden-door-with-key-for-security.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Woman locking door" />
-      <img src="https://images.pexels.com/photos/29458505/pexels-photo-29458505/free-photo-of-front-view-of-white-car-by-brick-wall.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Car outside" />
-      <img src="https://images.pexels.com/photos/29449059/pexels-photo-29449059/free-photo-of-sleek-black-car-parked-by-urban-building.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Black car parked" />
+    <div class="container">
+      <h2>Our Work &amp; Inspiration</h2>
+      <div class="image-grid">
+        <img src="https://images.pexels.com/photos/7641991/pexels-photo-7641991.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Key duplication" />
+        <img src="https://images.pexels.com/photos/11543858/pexels-photo-11543858.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Key close-up on table" />
+        <img src="https://images.pexels.com/photos/333837/pexels-photo-333837.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Keyhole close-up" />
+        <img src="https://images.pexels.com/photos/114741/pexels-photo-114741.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hand inserting key" />
+        <img src="https://images.pexels.com/photos/333838/pexels-photo-333838.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Locksmith tools" />
+        <img src="https://images.pexels.com/photos/29372725/pexels-photo-29372725/free-photo-of-woman-locking-wooden-door-with-key-for-security.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Woman locking door" />
+        <img src="https://images.pexels.com/photos/29458505/pexels-photo-29458505/free-photo-of-front-view-of-white-car-by-brick-wall.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Car outside" />
+        <img src="https://images.pexels.com/photos/29449059/pexels-photo-29449059/free-photo-of-sleek-black-car-parked-by-urban-building.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Black car parked" />
+      </div>
     </div>
   </section>
 
@@ -146,7 +161,7 @@
         <li>$85 during business hours (includes trip charge)</li>
         <li>Call for after-hours service (after 10:00pm)</li>
       </ul>
-      <p>Call or text: (262) 745-1628</p>
+      <p>Call or text: <a href="tel:+12627451628">(262) 745-1628</a></p>
     </div>
   </section>
 
@@ -154,7 +169,7 @@
     <div class="container">
       <h2>Home Maintenance and Repair</h2>
       <p>Let us know what you need, and we’ll give you a quote.</p>
-      <p>Call or text: (262) 745-1628</p>
+      <p>Call or text: <a href="tel:+12627451628">(262) 745-1628</a></p>
     </div>
   </section>
 
@@ -162,7 +177,7 @@
     <div class="container">
       <h2>Contact Us</h2>
       <p>Patrick "Mike" Kelley, Licensed Locksmith</p>
-      <p>Phone: (262) 745-1628</p>
+      <p>Phone: <a href="tel:+12627451628">(262) 745-1628</a></p>
       <p>
         Email:
         <a href="mailto:kelocks@hotmail.com">kelocks@hotmail.com</a>
@@ -175,20 +190,20 @@
   <section id="map">
     <div class="container">
       <h2>Our Location</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.132498705312!2d-95.46856618489408!3d29.760426981999944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c189e3f5e91f%3A0x4a67f6c4b1f7b2d!2sHouston%2C%20TX!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus" width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy" frameborder="0"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.132498705312!2d-95.46856618489408!3d29.760426981999944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c189e3f5e91f%3A0x4a67f6c4b1f7b2d!2sHouston%2C%20TX!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus" width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
 
   <section id="contact-form">
     <div class="container">
       <h2>Send Us a Message</h2>
-      <form action="#" method="POST">
+      <form id="contactForm" action="#" method="POST">
         <div class="form-group">
-          <label for="name">Name</label>
+          <label for="name">Name<span class="required">*</span></label>
           <input id="name" type="text" name="name" required placeholder="Your Name" />
         </div>
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="email">Email<span class="required">*</span></label>
           <input id="email" type="email" name="email" required placeholder="Your Email" />
         </div>
         <div class="form-group">
@@ -196,9 +211,11 @@
           <input id="phone" type="tel" name="phone" placeholder="Your Phone Number" />
         </div>
         <div class="form-group">
-          <label for="message">Message</label>
+          <label for="message">Message<span class="required">*</span></label>
           <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
         </div>
+        <!-- reCAPTCHA Widget -->
+        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
         <button type="submit">Send Message</button>
       </form>
     </div>
@@ -215,6 +232,7 @@
     <i class="fa fa-arrow-up"></i>
   </button>
 
+  <!-- Custom Scripts -->
   <script src="scripts.js"></script>
 </body>
 
