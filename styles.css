@@ -10,23 +10,21 @@ body {
   background-color: #f5f5dc; /* Soft Beige */
   color: #5d4037; /* Dark Brown */
   line-height: 1.6;
+  padding: 1rem; /* Add padding to prevent content from touching edges */
 }
 
-a {
-  color: #d2691e; /* Chocolate */
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-  color: #b35814; /* Darker Chocolate */
-}
-
+/* Enhanced Container with Rounded Corners and Shadow */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto; /* Center the container */
-  padding: 2rem 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+  border-radius: 15px; /* Rounded corners for unique shape */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  /* Optional: Use clip-path for more unique shapes
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  */
 }
 
 /* Header */
@@ -101,6 +99,8 @@ header nav ul.nav-links li a:hover {
     width: 100%;
     background-color: #f5f5dc; /* Soft Beige */
     transition: left 0.3s ease-in-out;
+    border-bottom-left-radius: 15px; /* Rounded corners for dropdown */
+    border-bottom-right-radius: 15px;
   }
 
   header nav ul.nav-links.active {
@@ -131,7 +131,7 @@ header nav ul.nav-links li a:hover {
 .hero .hero-text {
   background: rgba(0, 0, 0, 0.4);
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 15px; /* More rounded corners */
   text-align: center;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -305,7 +305,7 @@ section p {
   margin: 0 auto; /* Center the form */
   background-color: #fff8e1; /* Light Cream */
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 15px; /* More rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -435,6 +435,10 @@ footer p {
 
   #contact-form form {
     padding: 1rem;
+  }
+
+  .container {
+    padding: 1rem; /* Adjust container padding on smaller screens */
   }
 }
 
