@@ -10,7 +10,6 @@ body {
   background-color: #f5f5dc; /* Soft Beige */
   color: #5d4037; /* Dark Brown */
   line-height: 1.6;
-  /* Removed max-width: 90vh; as it's unconventional for width */
   margin: 0;
   padding: 0 1rem; /* Add horizontal padding to prevent content from touching edges */
 }
