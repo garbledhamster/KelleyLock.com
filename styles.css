@@ -381,8 +381,8 @@ footer p {
   position: fixed;
   bottom: 40px;
   right: 40px;
-  background-color: #d2691e; /* Chocolate */
-  color: #fff8e1; /* Light Cream */
+  background-color: #d2691e;
+  color: #fff8e1;
   border: none;
   padding: 0.8rem;
   border-radius: 50%;
@@ -390,6 +390,8 @@ footer p {
   cursor: pointer;
   display: none;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  height: 50px;
+  width: 50px;
 }
 
 #back-to-top:hover {
