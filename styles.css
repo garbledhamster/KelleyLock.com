@@ -15,6 +15,17 @@ body {
   padding: 0 1rem; /* Add horizontal padding to prevent content from touching edges */
 }
 
+/* Links */
+a {
+  color: #d2691e; /* Chocolate */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #b35814; /* Darker Chocolate */
+}
+
 /* Container - Primary */
 .container {
   width: 100%;
@@ -23,46 +34,17 @@ body {
   padding: 2rem 1rem; /* Adjusted padding for better spacing */
 }
 
-/* Container Variations */
-.container-rounded {
-  background: #fff8e1; /* Light Cream */
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Background Wrapper */
+.background-wrapper {
+  padding: 2rem 0;
 }
 
-.container-angled {
-  background: #fff;
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
+.background-wrapper.light {
+  background-color: #fff8e1; /* Light Cream */
 }
 
-.container-angled::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -50px;
-  width: 100px;
-  height: 100%;
-  background: #f5f5dc; /* Soft Beige */
-  transform: skewX(-20deg);
-}
-
-.container-angled::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -50px;
-  width: 100px;
-  height: 100%;
-  background: #f5f5dc; /* Soft Beige */
-  transform: skewX(20deg);
-}
-
-.container-angled > * {
-  position: relative;
-  z-index: 1;
+.background-wrapper.dark {
+  background-color: #f5f5dc; /* Soft Beige */
 }
 
 /* Header */
@@ -357,7 +339,7 @@ section p {
   margin: 0 auto; /* Center the form */
   background-color: #fff8e1; /* Light Cream */
   padding: 2rem;
-  border-radius: 15px; /* More rounded corners */
+  border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
