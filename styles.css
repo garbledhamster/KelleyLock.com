@@ -7,32 +7,32 @@
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #2c3e50;
+  background-color: #f5f5dc; /* Soft Beige */
+  color: #5d4037; /* Dark Brown */
   line-height: 1.6;
 }
 
 a {
-  color: #e74c3c;
+  color: #d2691e; /* Chocolate */
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-  color: #cc4333; /* darken(#e74c3c, 10%) */
+  color: #b35814; /* Darker Chocolate */
 }
 
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto; /* Center the container */
   padding: 2rem 0;
 }
 
 /* Header */
 header {
-  background-color: #2c3e50;
-  color: #ecf0f1;
+  background-color: #f5f5dc; /* Soft Beige */
+  color: #5d4037; /* Dark Brown */
   padding: 1.5rem 0;
   position: sticky;
   top: 0;
@@ -50,6 +50,7 @@ header .container {
 header h1 {
   font-size: 1.8rem;
   letter-spacing: 2px;
+  color: #5d4037; /* Dark Brown */
 }
 
 header h1 span {
@@ -57,13 +58,14 @@ header h1 span {
   font-size: 1rem;
   letter-spacing: 1px;
   margin-top: 0.3rem;
+  color: #6d4c41; /* Medium Brown */
 }
 
 header nav .hamburger {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #ecf0f1;
+  color: #5d4037; /* Dark Brown */
 }
 
 @media (max-width: 768px) {
@@ -87,7 +89,7 @@ header nav ul.nav-links li a {
 }
 
 header nav ul.nav-links li a:hover {
-  color: #e74c3c;
+  color: #d2691e; /* Chocolate */
 }
 
 @media (max-width: 768px) {
@@ -97,7 +99,7 @@ header nav ul.nav-links li a:hover {
     top: 60px;
     left: -100%;
     width: 100%;
-    background-color: #2c3e50;
+    background-color: #f5f5dc; /* Soft Beige */
     transition: left 0.3s ease-in-out;
   }
 
@@ -146,45 +148,49 @@ header nav ul.nav-links li a:hover {
 .hero .hero-text h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #fff8e1; /* Light Cream */
 }
 
 .hero .hero-text p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
+  color: #fff8e1; /* Light Cream */
 }
 
 .hero .hero-text .button {
-  background-color: #e74c3c;
+  background-color: #d2691e; /* Chocolate */
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 5px;
-  color: #ecf0f1;
+  color: #fff8e1; /* Light Cream */
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
 }
 
 .hero .hero-text .button:hover {
-  background-color: #cc4333; /* darken(#e74c3c, 10%) */
+  background-color: #b35814; /* Darker Chocolate */
 }
 
 /* Gallery Section */
 .gallery {
   padding: 2rem 0;
-  background-color: #fff;
+  background-color: #fff8e1; /* Light Cream */
 }
 
 .gallery h2 {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 2rem;
-  color: #2c3e50;
+  color: #5d4037; /* Dark Brown */
 }
 
 .gallery .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
+  max-width: 90%;
+  margin: 0 auto; /* Center the image grid */
 }
 
 .gallery .image-grid img {
@@ -209,18 +215,18 @@ section h2 {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 2rem;
-  color: #2c3e50;
+  color: #5d4037; /* Dark Brown */
 }
 
 section table {
   width: 100%;
   border-collapse: collapse;
-  margin: auto;
+  margin: 0 auto; /* Center the table */
 }
 
 section table thead {
-  background-color: #2c3e50;
-  color: #ecf0f1;
+  background-color: #d2691e; /* Chocolate */
+  color: #fff8e1; /* Light Cream */
 }
 
 section table th,
@@ -231,42 +237,43 @@ section table td {
 }
 
 section table tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #fff8e1; /* Light Cream */
 }
 
 section p {
   text-align: center;
   margin-top: 1rem;
   font-style: italic;
-  color: #2c3e50;
+  color: #5d4037; /* Dark Brown */
 }
 
 /* Contact Section */
 #contact {
-  background-color: #f4f4f4;
+  background-color: #fff8e1; /* Light Cream */
 }
 
 #contact p {
   text-align: center;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
+  color: #5d4037; /* Dark Brown */
 }
 
 #contact a {
-  color: #e74c3c;
+  color: #d2691e; /* Chocolate */
 }
 
 /* Map Section */
 #map {
   padding: 2rem 0;
-  background-color: #fff;
+  background-color: #f5f5dc; /* Soft Beige */
 }
 
 #map h2 {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 2rem;
-  color: #2c3e50;
+  color: #5d4037; /* Dark Brown */
 }
 
 #map iframe {
@@ -284,19 +291,23 @@ section p {
 /* Contact Form Section */
 #contact-form {
   padding: 2rem 0;
-  background-color: #f9f9f9;
+  background-color: #f5f5dc; /* Soft Beige */
 }
 
 #contact-form h2 {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 2rem;
-  color: #2c3e50;
+  color: #5d4037; /* Dark Brown */
 }
 
 #contact-form form {
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto; /* Center the form */
+  background-color: #fff8e1; /* Light Cream */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #contact-form form .form-group {
@@ -307,6 +318,11 @@ section p {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
+  color: #5d4037; /* Dark Brown */
+}
+
+#contact-form form .required {
+  color: #e74c3c;
 }
 
 #contact-form form .form-group input,
@@ -321,11 +337,11 @@ section p {
 
 #contact-form form .form-group input:focus,
 #contact-form form .form-group textarea:focus {
-  border-color: #e74c3c;
+  border-color: #d2691e; /* Chocolate */
   outline: none;
 }
 
-#contact-form form .g-recaptcha {
+.g-recaptcha {
   margin: 1rem 0;
   display: flex;
   justify-content: center;
@@ -335,8 +351,8 @@ section p {
   display: block;
   width: 100%;
   padding: 0.75rem;
-  background-color: #e74c3c;
-  color: #ecf0f1;
+  background-color: #d2691e; /* Chocolate */
+  color: #fff8e1; /* Light Cream */
   border: none;
   border-radius: 5px;
   font-size: 1.1rem;
@@ -345,13 +361,13 @@ section p {
 }
 
 #contact-form form button:hover {
-  background-color: #cc4333; /* darken(#e74c3c, 10%) */
+  background-color: #b35814; /* Darker Chocolate */
 }
 
 /* Footer */
 footer {
-  background-color: #2c3e50;
-  color: #ecf0f1;
+  background-color: #f5f5dc; /* Soft Beige */
+  color: #5d4037; /* Dark Brown */
   text-align: center;
   padding: 1rem 0;
 }
@@ -366,8 +382,8 @@ footer p {
   position: fixed;
   bottom: 40px;
   right: 40px;
-  background-color: #e74c3c;
-  color: #ecf0f1;
+  background-color: #d2691e; /* Chocolate */
+  color: #fff8e1; /* Light Cream */
   border: none;
   padding: 0.8rem;
   border-radius: 50%;
@@ -378,7 +394,7 @@ footer p {
 }
 
 #back-to-top:hover {
-  background-color: #cc4333; /* darken(#e74c3c, 10%) */
+  background-color: #b35814; /* Darker Chocolate */
 }
 
 #back-to-top.visible {
@@ -419,6 +435,22 @@ footer p {
   }
 
   #contact-form form {
-    padding: 0 1rem;
+    padding: 1rem;
   }
+}
+
+/* Additional Styles for Required Fields */
+.required {
+  color: #e74c3c;
+}
+
+/* List Styles */
+section ul {
+  list-style-type: disc; /* Ensure bullet points */
+  margin-left: 2rem; /* Indent lists for alignment */
+  text-align: left; /* Align text to left for readability */
+}
+
+section ul li {
+  margin-bottom: 0.5rem;
 }
