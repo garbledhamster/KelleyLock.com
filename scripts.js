@@ -3,102 +3,68 @@
   emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
 })();
 
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
-  const backToTopBtn = document.getElementById("back-to-top");
-  const contactForm = document.getElementById("contactForm");
-  const heroText = document.querySelector(".hero-text");
-  const heroSection = document.querySelector(".hero");
+// Hamburger Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-  // Toggle mobile menu
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    hamburger.classList.toggle("active");
+hamburger.addEventListener('click', () => {
+  const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+  hamburger.setAttribute('aria-expanded', !isExpanded);
+  navLinks.classList.toggle('active');
+});
+
+// Back-to-Top Button
+const backToTopButton = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300) {
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
+
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
   });
+});
 
-  // Smooth Scrolling
-  const links = document.querySelectorAll("a[href^='#']");
-  links.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      // Only apply smooth scrolling for internal links
-      if (this.getAttribute("href").startsWith("#")) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          const headerOffset = 60; // Adjust for header height
-          const elementPosition = target.getBoundingClientRect().top;
-          const offsetPosition =
-            elementPosition + window.pageYOffset - headerOffset;
+// Contact Form Submission
+const contactForm = document.getElementById('contactForm');
 
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-          });
+contactForm.addEventListener('submit', function (e) {
+  e.preventDefault();
 
-          // Close mobile menu after clicking
-          if (navLinks.classList.contains("active")) {
-            navLinks.classList.remove("active");
-            hamburger.classList.remove("active");
-          }
-        }
-      }
+  // Get form values
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const message = document.getElementById('message').value;
+  const recaptcha = grecaptcha.getResponse();
+
+  if (!recaptcha) {
+    alert('Please complete the reCAPTCHA.');
+    return;
+  }
+
+  // Prepare the template parameters
+  const templateParams = {
+    from_name: name,
+    from_email: email,
+    from_phone: phone,
+    message: message,
+  };
+
+  // Send the email using EmailJS
+  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+    .then(function (response) {
+      alert('Your message has been sent successfully!');
+      contactForm.reset();
+      grecaptcha.reset();
+    }, function (error) {
+      alert('There was an error sending your message. Please try again later.');
+      console.log('FAILED...', error);
     });
-  });
-
-  // Back-to-Top Button Functionality
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 300) {
-      backToTopBtn.classList.add("visible");
-    } else {
-      backToTopBtn.classList.remove("visible");
-    }
-
-    // Toggle hero text color based on scroll
-    if (window.pageYOffset > heroSection.offsetHeight - 100) {
-      heroText.classList.add("light-text");
-      heroText.classList.remove("dark-text");
-    } else {
-      heroText.classList.add("dark-text");
-      heroText.classList.remove("light-text");
-    }
-  });
-
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-
-  // Handle Form Submission with EmailJS
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    // Validate reCAPTCHA
-    const recaptchaResponse = grecaptcha.getResponse();
-    if (recaptchaResponse.length === 0) {
-      alert("Please complete the reCAPTCHA.");
-      return;
-    }
-
-    // Send the form using EmailJS
-    emailjs
-      .sendForm(
-        "YOUR_EMAILJS_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_EMAILJS_TEMPLATE_ID", // Replace with your EmailJS template ID
-        contactForm
-      )
-      .then(
-        () => {
-          alert("Thank you for your message! We will get back to you soon.");
-          contactForm.reset();
-          grecaptcha.reset();
-        },
-        (err) => {
-          console.error("FAILED...", err);
-          alert("Something went wrong. Please try again later.");
-        }
-      );
-  });
 });
