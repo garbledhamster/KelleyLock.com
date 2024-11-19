@@ -1,0 +1,207 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Kelley Locksmithing & Handyman Services
+    link(
+      rel="stylesheet",
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    )
+    // SCSS will be compiled in the CSS pane
+  body
+    header
+      .container
+        h1 KELLEY LOCKSMITHING &
+        span HANDYMAN SERVICES
+        nav
+          .hamburger
+            i.fa.fa-bars
+          ul.nav-links
+            li
+              a(href="#residential") Residential Locksmithing
+            li
+              a(href="#commercial") Commercial Locksmithing
+            li
+              a(href="#automotive") Automotive
+            li
+              a(href="#handyman") Handyman Services
+            li
+              a(href="#contact") Contact
+
+    section.hero
+      .hero-text
+        h2 Trusted Locksmithing & Handyman Services
+        p Over 30 years of experience in solving lock and home repair needs.
+        a.button(href="#contact") Get in Touch
+
+    section.gallery
+      h2 Our Work & Inspiration
+      .image-grid
+        img(
+          src="https://images.pexels.com/photos/7641991/pexels-photo-7641991.jpeg?auto=compress&cs=tinysrgb&w=600",
+          alt="Key duplication"
+        )
+        img(
+          src="https://images.pexels.com/photos/11543858/pexels-photo-11543858.jpeg?auto=compress&cs=tinysrgb&w=600",
+          alt="Key close-up on table"
+        )
+        img(
+          src="https://images.pexels.com/photos/333837/pexels-photo-333837.jpeg?auto=compress&cs=tinysrgb&w=600",
+          alt="Keyhole close-up"
+        )
+        img(
+          src="https://images.pexels.com/photos/114741/pexels-photo-114741.jpeg?auto=compress&cs=tinysrgb&w=600",
+          alt="Hand inserting key"
+        )
+        img(
+          src="https://images.pexels.com/photos/333838/pexels-photo-333838.jpeg?auto=compress&cs=tinysrgb&w=600",
+          alt="Locksmith tools"
+        )
+        img(
+          src="https://images.pexels.com/photos/29372725/pexels-photo-29372725/free-photo-of-woman-locking-wooden-door-with-key-for-security.jpeg?auto=compress&cs=tinysrgb&w=600",
+          alt="Woman locking door"
+        )
+        img(
+          src="https://images.pexels.com/photos/29458505/pexels-photo-29458505/free-photo-of-front-view-of-white-car-by-brick-wall.jpeg?auto=compress&cs=tinysrgb&w=600",
+          alt="Car outside"
+        )
+        img(
+          src="https://images.pexels.com/photos/29449059/pexels-photo-29449059/free-photo-of-sleek-black-car-parked-by-urban-building.jpeg?auto=compress&cs=tinysrgb&w=600",
+          alt="Black car parked"
+        )
+
+    section#residential
+      .container
+        h2 Residential Locksmithing Services
+        table
+          thead
+            tr
+              th Service
+              th Price
+          tbody
+            tr
+              td Remove old lock and replace new lock on door
+              td $20
+            tr
+              td New lock installation (includes drilling new hole)
+              td $50
+            tr
+              td Repair, if repairable
+              td $20
+            tr
+              td Rekey (1)
+              td $18
+            tr
+              td Rekey (5)
+              td $75
+            tr
+              td Antique Lock Repair
+              td $75
+        p *Parts not included.
+
+    section#commercial
+      .container
+        h2 Commercial Locksmithing Services
+        table
+          thead
+            tr
+              th Service
+              th Price
+          tbody
+            tr
+              td Lock Rekey / Key replacement
+              td $20
+            tr
+              td Rim & Mortise Lock
+              td Call for estimate
+            tr
+              td Schlage Level 1+ High Security (Primus), cut [1]
+              td $15
+            tr
+              td Schlage Primus cylinders, locks and padlocks [1]
+              td $25
+        p [1] Schlage keys must be keyed by a professional locksmith to ensure duplication is impossible.
+
+    section#automotive
+      .container
+        h2 Emergency Automotive Opening
+        p Locked your keys in your car? Call us for help!
+        ul
+          li $85 during business hours (includes trip charge)
+          li Call for after-hours service (after 10:00pm)
+        p Call or text: (262) 745-1628
+
+    section#handyman
+      .container
+        h2 Home Maintenance and Repair
+        p Let us know what you need, and we’ll give you a quote.
+        p Call or text: (262) 745-1628
+
+    section#contact
+      .container
+        h2 Contact Us
+        p Patrick "Mike" Kelley, Licensed Locksmith
+        p Phone: (262) 745-1628
+        p Email:
+          a(href="mailto:kelocks@hotmail.com") kelocks@hotmail.com
+        p $50 travel charge up to 5 miles, $0.56 per mile over 5 miles.
+        p Business hours: 8am - 6pm (Monday - Friday)
+
+    section#map
+      .container
+        h2 Our Location
+        iframe(
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.132498705312!2d-95.46856618489408!3d29.760426981999944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c189e3f5e91f%3A0x4a67f6c4b1f7b2d!2sHouston%2C%20TX!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus",
+          width="100%",
+          height="450",
+          style="border: 0",
+          allowfullscreen="",
+          loading="lazy",
+          frameborder="0"
+        )
+
+    section#contact-form
+      .container
+        h2 Send Us a Message
+        form(action="#", method="POST")
+          .form-group
+            label(for="name") Name
+            input#name(
+              type="text",
+              name="name",
+              required,
+              placeholder="Your Name"
+            )
+          .form-group
+            label(for="email") Email
+            input#email(
+              type="email",
+              name="email",
+              required,
+              placeholder="Your Email"
+            )
+          .form-group
+            label(for="phone") Phone
+            input#phone(
+              type="tel",
+              name="phone",
+              placeholder="Your Phone Number"
+            )
+          .form-group
+            label(for="message") Message
+            textarea#message(
+              name="message",
+              rows="5",
+              required,
+              placeholder="Your Message"
+            )
+          button(type="submit") Send Message
+
+    footer
+      .container
+        p &copy; 2024 Kelley Locksmithing & Handyman Services
+
+    // Back-to-Top Button
+    button#back-to-top
+      i.fa.fa-arrow-up
